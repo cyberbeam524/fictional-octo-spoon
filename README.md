@@ -1,2 +1,11 @@
 # fictional-octo-spoon
-# fictional-octo-spoon git init
+
+
+### Dependencies
+- Docker
+
+Run this to start the label encoding features:
+
+```
+make dockercomposeup
+```
