@@ -6,6 +6,9 @@ With few annotators or domain experts we need to be selective on which data out 
 
 ### Dependencies
 - Docker
+- MLFlow (Tracking model metrics and experiments)
+- DagsHub (for model registry and data versioning)
+- Label Studio (for annotators to use as user interface for annotating images)
 
 Run this to start the label encoding features:
 
@@ -25,3 +28,12 @@ Design Considerations:
 - Unseen data and new trends in new data that the current model has not seen/trained on
 - Decoupled design so that each service can be independently scaled up according to users and annotators' traffic
 - Models are regularly trained and the latest models are always used for prediction, ensuring up to date models that are constantly evolving
+
+
+Future improvements:
+- Use other metrics for prioritising data for labelling and compare results
+- Use metrics from MLFlow to trigger training only when accuracy falls under a certain percentage instead triggering training when there are 50 new annotations fetched from humans
+
+Credits: 
+- https://bytebytego.com/intro/machine-learning-system-design-interview
+- https://dagshub.com/docs/tutorial/label_studio_tutorial/
